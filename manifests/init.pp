@@ -13,7 +13,7 @@ node default {
     include git
     include cron
     class { 'Git::Clone':
-             repo => "https://github.com/spotts-moz/flaskt_app",
+             repo => "https://github.com/spotts-moz/flask_app",
              dpath => "/var/www/${hostname}.${domain}/src",
            }
 
