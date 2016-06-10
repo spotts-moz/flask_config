@@ -16,7 +16,7 @@ node default {
              repo => "https://github.com/spotts-moz/flask_app",
              dpath => "/var/www/${hostname}.${domain}/src",
            }
-   class { 'Git::Clone':
+    class { 'Git::Clone':
              repo => "https://github.com/spotts-moz/flask_config",
              dpath => "/etc/puppet/",
            }
