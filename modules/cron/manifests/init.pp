@@ -5,6 +5,6 @@ file { "run_puppet.cron":
     owner   => "root",
     group   => "root",
     mode    => 0644,
-    content => "*/5 * * * * root  puppet apply /etc/puppet/manifests/init.pp \n";
+    content => "* * * * * root  puppet apply /etc/puppet/manifests/init.pp \n";
 }
 }
