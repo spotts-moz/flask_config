@@ -14,7 +14,7 @@ class git {
       ensure   => latest,
       provider => git,
       require  => [ Package["git"] ],
-      source   => "${repo}.git",
+      source   => "${repo}",
       revision => 'master',
     }
 
