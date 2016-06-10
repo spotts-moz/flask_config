@@ -20,5 +20,9 @@ node default {
              repo => "https://github.com/spotts-moz/flask_config",
              dpath => "/etc/puppet/"
            }
-
+    exec {"restartuwsgi":
+           path => [ '/bin', '/usr/bin', '/usr/local/bin','/sbin' ],
+           command  => "initctl restart uwsgi",
+           subscribe =>  Vcsrepo["/var/www/${hostname}.${domain}/src"],
+    }
 }
