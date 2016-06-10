@@ -1,7 +1,7 @@
 class git {
       package { 'git':
-      ensure => installed,
-      
+        ensure => installed,
+      }
   define clone ($repo, $dpath) {
   
     file { "${dpath}" :
