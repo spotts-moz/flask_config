@@ -12,13 +12,13 @@ node default {
     include utils
     include git
     include cron
-    class { 'Git::Clone':
+    git::clone{
+            "getflask":
              repo => "https://github.com/spotts-moz/flask_app",
-             dpath => "/var/www/${hostname}.${domain}/src",
-           }
-    class { 'Git::Clone':
+             dpath => "/var/www/${hostname}.${domain}/src";
+           "uppup":
              repo => "https://github.com/spotts-moz/flask_config",
-             dpath => "/etc/puppet/",
+             dpath => "/etc/puppet/"
            }
 
 }
